@@ -3,13 +3,14 @@ const dsp = document.querySelector(".task-display-container");
 const http = new XMLHttpRequest();
 const submitBtn = document.querySelector(".butt");
 const formData = document.querySelector(".task");
+
 const fetchData = () => {
   http.onload = () => {
     const { allTasks } = JSON.parse(http.response);
     allTasks.map((user) => {
       const { _id: userID, name } = user;
 
-      dsp.innerHTML += `<div class="d-flex justify-content-between" style="height: 30px;  margin-bottom: 25px; background-color: lime; border:2px solid green;" class="${userID}"> <span style="font-weight: bold;" class="pb-3" id="${userID}"> ${name} </span ><span class="align-self-center"><button class="btn items-button" id="${userID}" onclick="deleteTask(this)"><i class="bi bi-trash"></i></button><button><i class="bi bi-pencil"></i></button></span>
+      dsp.innerHTML += `<div class="d-flex justify-content-between" style="height: 30px;  margin-bottom: 25px; background-color: lime; border:2px solid green;" class="${userID}"> <span style="font-weight: bold;" class="pb-3" id="${userID}"> ${name} </span ><span class="align-self-center"><button class="btn items-button" id="${userID}" onclick="deleteTask(this)"><i class="bi bi-trash"></i></button><a href="editTask.html?taskId=${userID}&taskName=${name}"><button id="${userID}"><i class="bi bi-pencil"></i></button></a></span>
          </div>`;
     });
   };
@@ -41,7 +42,7 @@ const addTask = () => {
     try {
       const { task } = await JSON.parse(http.response);
       const { _id: userID, name } = task;
-      dsp.innerHTML += `<div class="d-flex justify-content-between" style="height: 30px;  margin-bottom: 25px; background-color: lime; border:2px solid green;"> <span style="font-weight: bold;" class="pb-3" id="${userID}"> ${name} </span ><span class="align-self-center"><button class="btn items-button" id="${userID}" onclick="deleteTask(this)"><i class="bi bi-trash"></i></button><button><i class="bi bi-pencil"></i></button></span>
+      dsp.innerHTML += `<div class="d-flex justify-content-between" style="height: 30px;  margin-bottom: 25px; background-color: lime; border:2px solid green;"> <span style="font-weight: bold;" class="pb-3" id="${userID}"> ${name} </span ><span class="align-self-center"><button class="btn items-button" id="${userID}" onclick="deleteTask(this)"><i class="bi bi-trash"></i></button><a href="editTask.html?taskId=${userID}&taskName=${name}"><button><i class="bi bi-pencil"></i></button></a></span>
          </div>`;
       window.alert("success! task added");
       formData.value = "";

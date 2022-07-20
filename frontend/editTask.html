@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang=""en>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width initial-scale=1.0" >
+        <link rel="stylesheet" href="editTask.css">
+    </head>
+    <body>
+        <div class="form-container">
+            <form class="edit-task-form" action="">
+                <div >
+                    <label for="task_id">TASK ID(read-only):</label>
+                    <input type="text" class="task_id" readonly></div>
+                <div>
+                    <label for="task_name">TASK NAME:</label>
+                    <input type="text" class="task_name">
+                </div>
+                <div>
+                    <label for="task_completed">TASK COMPLETED:</label>
+                    <input type="checkbox" id="task_completed">
+                </div>
+                <button class="edit-task-submit" type="submit">DONE</button>
+            </form>
+        </div>
+        <script src="editTask.js"></script>
+    </body>
+</html>
