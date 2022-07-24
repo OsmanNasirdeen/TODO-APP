@@ -15,26 +15,27 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container ">
-        <div class="task-container d-flex justify-content-center align-items-center" style="height: 300px;">
-            <div class="mb-3  w-50 ">
-            
+    <div class="container d-flex flex-column">
+        <div class="align-self-center task-container d-flex flex-column justify-content-center align-items-center border border-4 rounded-start" style="height: 300px; width:58%;">
+            <div class="mb-3">
                 <form>
                     <div class="form-group d-inline">
-                        <h4 class="mx-3">TASK MANAGER</h4>
+                        <h4 class="text-center">TASK MANAGER</h4>
+                        <h5 class="text-center">ADD A TASK</h5>
                         <label for="task" class="form-label"><h4>Task:</h4></label>
-                        <input type="text" name="name" class=" task form-control form-control form-control-sm w-50 d-inline" id="task"
+                        <input type="text" name="name" class=" task form-control form-control form-control-sm w-auto d-inline" id="task"
                             placeholder="e.g COOKING DISH">
                         
                         
                     </div>
                     
-                    <button type="button" class="btn btn-primary submit" onclick="addTask()">Submit</button>
+                    <button type="button" class="btn btn-primary" onclick="addTask()">Submit</button>
                 </form>
                 
                 
             </div>
         </div>
+        <h1 class="tasks-heading align-self-baseline ">TASKS:</h1>
         <div class="task-display-container p-3" ></div>
     
 

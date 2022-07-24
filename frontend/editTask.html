@@ -4,11 +4,13 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width initial-scale=1.0" >
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="editTask.css">
     </head>
     <body>
         <div class="form-container">
-            <form class="edit-task-form" action="">
+            <form class="edit-task-form">
                 <div >
                     <label for="task_id">TASK ID(read-only):</label>
                     <input type="text" class="task_id" readonly></div>
@@ -20,9 +22,12 @@
                     <label for="task_completed">TASK COMPLETED:</label>
                     <input type="checkbox" id="task_completed">
                 </div>
-                <button class="edit-task-submit" type="submit">DONE</button>
+                <button class="edit-task-submit btn btn-primary" type="button">DONE</button>
             </form>
         </div>
         <script src="editTask.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
     </body>
 </html>

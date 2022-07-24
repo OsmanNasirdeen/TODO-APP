@@ -1,7 +1,6 @@
 const btn = document.querySelector(".getItems");
 const dsp = document.querySelector(".task-display-container");
 const http = new XMLHttpRequest();
-const submitBtn = document.querySelector(".butt");
 const formData = document.querySelector(".task");
 
 const fetchData = () => {
